@@ -48,7 +48,7 @@ pub const ADOBE_DATA_ALLOWED: &[(&str, &str)] = &[("hayro-cmap", "assets/cmaps.b
 /// technical data we hold ourselves rather than through a dependency. Each still needs an
 /// `[[asset]]` entry with `adobe_data = true`, so its SHA-256 is checked and any change to the
 /// table has to be re-attested deliberately.
-pub const ADOBE_DATA_FILES: &[&str] = &["crates/fonts/src/std14_metrics.rs", "vendor/hayro-cmap/assets/cmaps.brotli"];
+pub const ADOBE_DATA_FILES: &[&str] = &["vendor/hayro-cmap/assets/cmaps.brotli"];
 
 /// File extensions that count as assets wherever they appear in the repository.
 const ASSET_EXTENSIONS: &[&str] = &[
@@ -594,8 +594,8 @@ mod tests {
     #[test]
     fn first_party_adobe_data_only_on_the_closed_list() {
         let l = lock(&[]);
-        // The generated standard-14 table is on the list, as `kind = "data"`.
-        let mut ok = asset("crates/fonts/src/std14_metrics.rs", "Adobe (Core14 AFM metrics); tables by the PdfCraft contributors", "data", "MIT");
+        // The closed-list Adobe data file is allowed as `kind = "data"`.
+        let mut ok = asset("vendor/hayro-cmap/assets/cmaps.brotli", "Adobe", "data", "BSD-3-Clause");
         ok.adobe_data = true;
         let m = Manifest { asset: vec![ok], ..Default::default() };
         assert!(check(&root(), &m, &[], &l).is_empty(), "{:?}", check(&root(), &m, &[], &l));
@@ -607,7 +607,7 @@ mod tests {
         assert!(check(&root(), &m, &[], &l).iter().any(|p| p.contains("closed list")));
 
         // Even on the list, it may only be data — never a typeface.
-        let mut wrong_kind = asset("crates/fonts/src/std14_metrics.rs", "Adobe", "font", "MIT");
+        let mut wrong_kind = asset("vendor/hayro-cmap/assets/cmaps.brotli", "Adobe", "font", "BSD-3-Clause");
         wrong_kind.adobe_data = true;
         let m = Manifest { asset: vec![wrong_kind], ..Default::default() };
         assert!(!check(&root(), &m, &[], &l).is_empty());
