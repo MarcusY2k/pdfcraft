@@ -180,14 +180,14 @@ unset_env = ["CRAFT_FONTS_DIR", "CRAFT_FONTS_REQUIRED", "CRAFT_I18N_DIR", "CRAFT
 
 # BEGIN port-kit framework patch
 [patch.crates-io]
-krilla = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/vendor/krilla" }
-hayro = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/vendor/hayro" }
-hayro-interpret = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/vendor/hayro-interpret" }
-hayro-syntax = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/vendor/hayro-syntax" }
-hayro-jbig2 = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/vendor/hayro-jbig2" }
-hayro-cmap = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/vendor/hayro-cmap" }
-hayro-postscript = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/vendor/hayro-postscript" }
-linesweeper = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/vendor/linesweeper" }
+krilla = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/vendor/krilla" }
+hayro = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/vendor/hayro" }
+hayro-interpret = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/vendor/hayro-interpret" }
+hayro-syntax = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/vendor/hayro-syntax" }
+hayro-jbig2 = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/vendor/hayro-jbig2" }
+hayro-cmap = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/vendor/hayro-cmap" }
+hayro-postscript = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/vendor/hayro-postscript" }
+linesweeper = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/vendor/linesweeper" }
 ecolor = { git = "https://github.com/storytold/egui.git", rev = "f5025284445ea19c35f746d96fc0b75468b3f560" }
 emath = { git = "https://github.com/storytold/egui.git", rev = "f5025284445ea19c35f746d96fc0b75468b3f560" }
 epaint = { git = "https://github.com/storytold/egui.git", rev = "f5025284445ea19c35f746d96fc0b75468b3f560" }
@@ -209,40 +209,40 @@ vello_cpu = { path = "vendor/vello_cpu" }
 
 [patch."https://github.com/storytold/craft-libs"]
 # END port-kit framework patch
-craft = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/craft" }
-craft-cms = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/cms" }
-craft-codepage = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/codepage" }
-craft-csv = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/csv" }
-craft-docpath = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/docpath" }
-craft-docx = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/docx" }
-craft-drawingml = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/drawingml" }
-craft-flow = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/flow" }
-craft-fonts-build = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/fonts-build" }
-craft-html = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/html" }
-craft-i18n = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/i18n" }
-craft-image-codecs = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/image-codecs" }
-craft-jpeg = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/jpeg" }
-craft-jsonrpc = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/jsonrpc" }
-craft-keymap = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/keymap" }
-craft-markdown = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/markdown" }
-craft-math = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/math" }
-craft-mcp-server = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/mcp-server" }
-craft-menu = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/menu" }
-craft-mime = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/mime" }
-craft-opc = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/opc" }
-craft-pdf = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/pdf" }
-craft-pkcs7 = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/pkcs7" }
-craft-pptx = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/pptx" }
-craft-prc = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/prc" }
-craft-print = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/print" }
-craft-quit = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/quit" }
-craft-rtf = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/rtf" }
-craft-stream-codecs = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/stream-codecs" }
-craft-tiff = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/tiff" }
-craft-ui = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/ui" }
-craft-update = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/update" }
-craft-web-api = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/web-api" }
-craft-web-host = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/web-host" }
-craft-wordmodel = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/wordmodel" }
-craft-xml = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/xml" }
-craft-zip = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/racheck-fw/crates/zip" }
+craft = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/craft" }
+craft-cms = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/cms" }
+craft-codepage = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/codepage" }
+craft-csv = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/csv" }
+craft-docpath = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/docpath" }
+craft-docx = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/docx" }
+craft-drawingml = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/drawingml" }
+craft-flow = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/flow" }
+craft-fonts-build = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/fonts-build" }
+craft-html = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/html" }
+craft-i18n = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/i18n" }
+craft-image-codecs = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/image-codecs" }
+craft-jpeg = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/jpeg" }
+craft-jsonrpc = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/jsonrpc" }
+craft-keymap = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/keymap" }
+craft-markdown = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/markdown" }
+craft-math = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/math" }
+craft-mcp-server = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/mcp-server" }
+craft-menu = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/menu" }
+craft-mime = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/mime" }
+craft-opc = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/opc" }
+craft-pdf = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/pdf" }
+craft-pkcs7 = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/pkcs7" }
+craft-pptx = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/pptx" }
+craft-prc = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/prc" }
+craft-print = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/print" }
+craft-quit = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/quit" }
+craft-rtf = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/rtf" }
+craft-stream-codecs = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/stream-codecs" }
+craft-tiff = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/tiff" }
+craft-ui = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/ui" }
+craft-update = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/update" }
+craft-web-api = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/web-api" }
+craft-web-host = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/web-host" }
+craft-wordmodel = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/wordmodel" }
+craft-xml = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/xml" }
+craft-zip = { path = "/var/home/dylan/Projects/pdfcraft-port/trees/fw-sync/crates/zip" }
